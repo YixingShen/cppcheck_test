@@ -715,7 +715,6 @@ Checking MISRA-Example-Suite\R_22_system.c ...
 Checking MISRA-Example-Suite\R_22_system.c: __STDC_VERSION__...
 238/238 files checked 100% done
 
-D:\GitClone\cppcheck_test>python htmlreport/cppcheck-htmlreport --file=report.xml --report-dir=output --source-dir=.
 Parsing xml report.
 Creating output directory
 Processing errors
