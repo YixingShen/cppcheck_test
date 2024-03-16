@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_08_14.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_08_14.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_08_14.c</p>
-<a href="40.html#line-22"> misra-c2012-8.14 22</a><a href="40.html#line-23"> misra-c2012-8.14 23</a><a href="40.html#line-26"> misra-c2012-11.8 26</a><a href="40.html#line-26"> misra-c2012-17.8 26</a><a href="40.html#line-34"> constVariable 34</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_08_14.c</p>
+<a href="40.html#line-22"> misra-c2012-8.14 22</a><a href="40.html#line-23"> misra-c2012-8.14 23</a><a href="40.html#line-26"> cstyleCast 26</a><a href="40.html#line-26"> misra-c2012-11.8 26</a><a href="40.html#line-34"> constVariable 34</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -284,11 +284,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-19" name="line-19"></a>
 <a id="line-20" name="line-20"></a>
 <a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">user_copy</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">restrict</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w">       </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-23" name="line-23"></a><span class="hll"><span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">restrict</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w">  </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-22" name="line-22"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">user_copy</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">restrict</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w">       </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-23" name="line-23"></a><span class="hll"><span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">restrict</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w">  </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-24" name="line-24"></a><span class="w">                       </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
 <a id="line-25" name="line-25"></a><span class="p">{</span><span class="w"></span>
-<a id="line-26" name="line-26"></a><span class="hll"><span class="w">   </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="n">q</span><span class="p">;</span><span class="w">    </span><span class="cm">/* breaks R.11.8, R.17.8 */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span><span class="error2">&lt;--- Advisory - An argument to a function should be treated as read-only</span>
+<a id="line-26" name="line-26"></a><span class="hll"><span class="w">   </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="n">q</span><span class="p">;</span><span class="w">    </span><span class="cm">/* breaks R.11.8, R.17.8 */</span><span class="w"></span><div class="verbose expandable"><span class="error2">&lt;--- C-style pointer casting <span class="marker">[+]</span></span><div class="content">C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected.</div></div><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-27" name="line-27"></a><span class="w">   </span><span class="n">use_void_ptr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-28" name="line-28"></a><span class="w">   </span><span class="n">use_int16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-29" name="line-29"></a><span class="p">}</span><span class="w"></span>

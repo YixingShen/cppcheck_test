@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_21_07.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_21_06.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_21_07.c</p>
-<a href="131.html#line-26"> misra-c2012-21.7 26</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_21_06.c</p>
+<a href="131.html#line-19"> misra-c2012-21.6 19</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -251,14 +251,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
-<a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-11-01</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
 <a id="line-5" name="line-5"></a><span class="cm"> *</span>
@@ -268,28 +262,22 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.21.7</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.21.6</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * The Standard Library functions atof, atoi, atol and atoll of &lt;stdlib.h&gt;</span>
-<a id="line-15" name="line-15"></a><span class="cm"> * shall not be used</span>
-<a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
-<a id="line-17" name="line-17"></a>
-<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
-<a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
-<a id="line-20" name="line-20"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_21_7</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="p">{</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="w">  </span><span class="n">float64_t</span><span class="w"> </span><span class="n">a_to_float_result</span><span class="p">;</span><span class="w"></span>
+<a id="line-14" name="line-14"></a><span class="cm"> * The Standard Library input/output routines shall not be used</span>
+<a id="line-15" name="line-15"></a><span class="cm"> */</span><span class="w"></span>
+<a id="line-16" name="line-16"></a>
+<a id="line-17" name="line-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
+<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-19" name="line-19"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="c1">             /* Non-compliant */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-20" name="line-20"></a>
+<a id="line-21" name="line-21"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_21_6</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-22" name="line-22"></a><span class="p">{</span><span class="w"></span>
+<a id="line-23" name="line-23"></a><span class="w">     </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">&quot;The library stdio shall not be used</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
+<a id="line-24" name="line-24"></a><span class="p">}</span><span class="w"></span>
 <a id="line-25" name="line-25"></a>
-<a id="line-26" name="line-26"></a><span class="hll"><span class="w">  </span><span class="n">a_to_float_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atof</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">&quot;123.5&quot;</span><span class="w"> </span><span class="p">);</span><span class="w">      </span><span class="cm">/* Non_compliant, also breaks R.22.8, R.22.9 */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-27" name="line-27"></a>
-<a id="line-28" name="line-28"></a><span class="w">  </span><span class="n">use_float64</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a_to_float_result</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-29" name="line-29"></a>
-<a id="line-30" name="line-30"></a><span class="p">}</span><span class="w"></span>
-<a id="line-31" name="line-31"></a>
-<a id="line-32" name="line-32"></a><span class="cm">/* end of R_21_07.c */</span><span class="w"></span>
-<a id="line-33" name="line-33"></a>
+<a id="line-26" name="line-26"></a><span class="cm">/* end of R_21_06.c */</span><span class="w"></span>
+<a id="line-27" name="line-27"></a>
 </pre></div></td></tr></table></div>
 
     </div>

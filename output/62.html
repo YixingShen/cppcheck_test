@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_11_09.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_11_09.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_11_09.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_11_09.c</p>
 <a href="62.html#line-32"> constVariablePointer 32</a><a href="62.html#line-32"> misra-c2012-11.9 32</a><a href="62.html#line-33"> constVariablePointer 33</a><a href="62.html#line-34"> constVariablePointer 34</a><a href="62.html#line-34"> unreadVariable 34</a><a href="62.html#line-36"> misra-c2012-11.9 36</a>
     </div>
     <div id="content">
@@ -307,11 +307,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-29" name="line-29"></a>
 <a id="line-30" name="line-30"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_11_9</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-31" name="line-31"></a><span class="p">{</span><span class="w"></span>
-<a id="line-32" name="line-32"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- Variable 'p1' can be declared as pointer to const</span><span class="error2">&lt;--- Required - An integer null pointer shall have no value assigned other than NULL macro</span>
+<a id="line-32" name="line-32"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- Variable 'p1' can be declared as pointer to const</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-33" name="line-33"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Compliant     */</span><span class="w"></span><span class="error2">&lt;--- Variable 'p2' can be declared as pointer to const</span>
 </span><a id="line-34" name="line-34"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MY_NULL_3</span><span class="p">;</span><span class="w">      </span><span class="cm">/* Compliant     */</span><span class="w"></span><span class="error2">&lt;--- Variable 'p3' can be declared as pointer to const</span><span class="error2">&lt;--- Variable 'p3' is assigned a value that is never used.</span>
 </span><a id="line-35" name="line-35"></a>
-<a id="line-36" name="line-36"></a><span class="hll"><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MY_NULL_1</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="cm">/* Non-compliant - also breaks R.14.3 */</span><span class="w"></span><span class="error2">&lt;--- Required - An integer null pointer shall have no value assigned other than NULL macro</span>
+<a id="line-36" name="line-36"></a><span class="hll"><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MY_NULL_1</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="cm">/* Non-compliant - also breaks R.14.3 */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-37" name="line-37"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
 <a id="line-38" name="line-38"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-39" name="line-39"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MY_NULL_2</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="cm">/* Compliant - but breaks R.14.3 */</span><span class="w"></span>

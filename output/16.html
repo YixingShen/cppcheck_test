@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_05_05.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_05_05.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_05_05.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_05_05.c</p>
 <a href="16.html#line-36"> misra-c2012-5.5 36</a>
     </div>
     <div id="content">
@@ -305,7 +305,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-33" name="line-33"></a>
 <a id="line-34" name="line-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_5_5</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-35" name="line-35"></a><span class="p">{</span><span class="w"></span>
-<a id="line-36" name="line-36"></a><span class="hll"><span class="w">   </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                    </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-36" name="line-36"></a><span class="hll"><span class="w">   </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">Sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                    </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-37" name="line-37"></a><span class="w">   </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NextSum</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">);</span><span class="w">       </span><span class="cm">/* Compliant     */</span><span class="w"></span>
 <a id="line-38" name="line-38"></a>
 <a id="line-39" name="line-39"></a><span class="w">   </span><span class="n">use_int16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Sum</span><span class="w"> </span><span class="p">);</span><span class="w"></span>

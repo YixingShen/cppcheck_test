@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_12_02.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_12_02.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_12_02.c</p>
-<a href="64.html#line-32"> misra-c2012-12.2 32</a><a href="64.html#line-38"> misra-c2012-10.3 38</a><a href="64.html#line-38"> misra-c2012-12.2 38</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_12_02.c</p>
+<a href="64.html#line-32"> misra-c2012-12.2 32</a><a href="64.html#line-38"> misra-c2012-10.3 38</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -303,13 +303,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-29" name="line-29"></a><span class="w">    </span><span class="n">u8a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">7</span><span class="w">   </span><span class="p">;</span><span class="w">             </span><span class="cm">/* Compliant */</span><span class="w"></span>
 <a id="line-30" name="line-30"></a><span class="w">    </span><span class="n">use_uint8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-31" name="line-31"></a>
-<a id="line-32" name="line-32"></a><span class="hll"><span class="w">    </span><span class="n">u8a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">                </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- Required - Right hand side of a shift operation must not exceed the width of the essential value. Potential shift too far or negative shift. </span>
+<a id="line-32" name="line-32"></a><span class="hll"><span class="w">    </span><span class="n">u8a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">                </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-33" name="line-33"></a><span class="w">    </span><span class="n">use_uint8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-34" name="line-34"></a>
 <a id="line-35" name="line-35"></a><span class="w">    </span><span class="n">u16a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w">    </span><span class="cm">/* Compliant */</span><span class="w"></span>
 <a id="line-36" name="line-36"></a><span class="w">    </span><span class="n">use_uint16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u16a</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-37" name="line-37"></a>
-<a id="line-38" name="line-38"></a><span class="hll"><span class="w">    </span><span class="n">u8a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1u</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">10u</span><span class="p">;</span><span class="w">               </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- Required - The value from an expression must only be assigned to an object with the same or larger essential type</span><span class="error2">&lt;--- Required - Right hand side of a shift operation must not exceed the width of the essential value. Potential shift too far or negative shift. </span>
+<a id="line-38" name="line-38"></a><span class="hll"><span class="w">    </span><span class="n">u8a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1u</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">10u</span><span class="p">;</span><span class="w">               </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-39" name="line-39"></a><span class="w">    </span><span class="n">use_uint8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u8a</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-40" name="line-40"></a>
 <a id="line-41" name="line-41"></a><span class="w">    </span><span class="n">u16a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="p">)</span><span class="mi">1u</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">10u</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Compliant     */</span><span class="w"></span>

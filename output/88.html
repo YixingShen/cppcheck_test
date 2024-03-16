@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_16_03.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_16_03.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_16_03.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_16_03.c</p>
 <a href="88.html#line-35"> misra-c2012-16.3 35</a><a href="88.html#line-42"> misra-c2012-16.3 42</a>
     </div>
     <div id="content">
@@ -307,14 +307,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-32" name="line-32"></a><span class="w">         </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <a id="line-33" name="line-33"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span><span class="w"></span>
 <a id="line-34" name="line-34"></a><span class="w">         </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">                </span><span class="cm">/* Non-compliant - break omitted */</span><span class="w"></span>
-<a id="line-35" name="line-35"></a><span class="hll"><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="w"></span><span class="error2">&lt;--- Required - All cases within switches must have an unconditional break statement</span>
+<a id="line-35" name="line-35"></a><span class="hll"><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-36" name="line-36"></a><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-37" name="line-37"></a><span class="w">         </span><span class="p">{</span><span class="w"></span>
 <a id="line-38" name="line-38"></a><span class="w">            </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
 <a id="line-39" name="line-39"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w">             </span><span class="cm">/* Non-compliant - conditional break  */</span><span class="w"></span>
 <a id="line-40" name="line-40"></a>
 <a id="line-41" name="line-41"></a><span class="w">         </span><span class="p">}</span><span class="w"></span>
-<a id="line-42" name="line-42"></a><span class="hll"><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"></span><span class="error2">&lt;--- Required - All cases within switches must have an unconditional break statement</span>
+<a id="line-42" name="line-42"></a><span class="hll"><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-43" name="line-43"></a><span class="w">         </span><span class="p">;</span><span class="w">                    </span><span class="cm">/* Non-compliant - default must also have a break  */</span><span class="w"></span>
 <a id="line-44" name="line-44"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-45" name="line-45"></a>

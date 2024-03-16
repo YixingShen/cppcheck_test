@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_13_02.h</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_13_02.h</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_13_02.h</p>
-<a href="70.html#line-19"> misra-c2012-5.8 19</a><a href="70.html#line-29"> misra-c2012-8.5 29</a><a href="70.html#line-29"> misra-c2012-5.8 29</a><a href="70.html#line-31"> misra-c2012-12.3 31</a><a href="70.html#line-31"> misra-c2012-5.8 31</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_13_02.h</p>
+<a href="70.html#line-19"> misra-c2012-5.8 19</a><a href="70.html#line-29"> misra-c2012-8.5 29</a><a href="70.html#line-31"> misra-c2012-12.3 31</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -278,7 +278,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-16" name="line-16"></a>
 <a id="line-17" name="line-17"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">struct_fn_t</span><span class="w"></span>
 <a id="line-18" name="line-18"></a><span class="p">{</span><span class="w"></span>
-<a id="line-19" name="line-19"></a><span class="hll"><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fn</span><span class="p">)(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">struct_fn_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s_fn_ptr</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
+<a id="line-19" name="line-19"></a><span class="hll"><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">fn</span><span class="p">)(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">struct_fn_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s_fn_ptr</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-20" name="line-20"></a><span class="p">}</span><span class="w"> </span><span class="n">struct_fn</span><span class="p">;</span><span class="w"></span>
 <a id="line-21" name="line-21"></a>
 <a id="line-22" name="line-22"></a>
@@ -288,9 +288,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-26" name="line-26"></a>
 <a id="line-27" name="line-27"></a>
 <a id="line-28" name="line-28"></a>
-<a id="line-29" name="line-29"></a><span class="hll"><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">xx</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">yy</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Required - An object or function must only be declared once</span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
+<a id="line-29" name="line-29"></a><span class="hll"><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">xx</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">yy</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-30" name="line-30"></a>
-<a id="line-31" name="line-31"></a><span class="hll"><span class="k">extern</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Advisory - The comma operator is not permitted.</span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
+<a id="line-31" name="line-31"></a><span class="hll"><span class="k">extern</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-32" name="line-32"></a>
 <a id="line-33" name="line-33"></a>
 <a id="line-34" name="line-34"></a>

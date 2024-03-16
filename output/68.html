@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_13_01_1.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_13_01_1.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_13_01_1.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_13_01_1.c</p>
 <a href="68.html#line-21"> misra-c2012-5.9 21</a><a href="68.html#line-24"> constVariable 24</a><a href="68.html#line-32"> constVariable 32</a><a href="68.html#line-42"> misra-c2012-13.1 42</a>
     </div>
     <div id="content">
@@ -300,7 +300,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-18" name="line-18"></a>
 <a id="line-19" name="line-19"></a><span class="k">volatile</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">vol</span><span class="p">;</span><span class="w"></span>
 <a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-21" name="line-21"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-22" name="line-22"></a><span class="p">{</span><span class="w"></span>
 <a id="line-23" name="line-23"></a><span class="w">   </span><span class="cm">/* Non-compliant - volatile access is persistent side effect */</span><span class="w"></span>
 <a id="line-24" name="line-24"></a><span class="hll"><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">vol</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span><span class="error2">&lt;--- Variable 'a' can be declared as const array</span>
@@ -321,7 +321,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-39" name="line-39"></a><span class="p">{</span><span class="w"></span>
 <a id="line-40" name="line-40"></a><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0u</span><span class="p">;</span><span class="w"></span>
 <a id="line-41" name="line-41"></a><span class="w">   </span><span class="cm">/* Non-compliant - two side effects - Also breaks R.13.3 */</span><span class="w"></span>
-<a id="line-42" name="line-42"></a><span class="hll"><span class="w">   </span><span class="n">use_arr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="p">[</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-42" name="line-42"></a><span class="hll"><span class="w">   </span><span class="n">use_arr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="p">[</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-43" name="line-43"></a>
 <a id="line-44" name="line-44"></a><span class="w">   </span><span class="n">use_uint16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-45" name="line-45"></a><span class="p">}</span><span class="w"></span>

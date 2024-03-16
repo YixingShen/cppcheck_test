@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_02_05.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_02_05.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_02_05.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_02_05.c</p>
 <a href="7.html#line-26"> misra-c2012-2.5 26</a><a href="7.html#line-33"> misra-c2012-20.5 33</a>
     </div>
     <div id="content">
@@ -285,14 +285,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-23" name="line-23"></a>
 <a id="line-24" name="line-24"></a><span class="cp">#define SIZE 4</span>
 <a id="line-25" name="line-25"></a><span class="cm">/* Non-compliant - DATA not used */</span><span class="w"></span>
-<a id="line-26" name="line-26"></a><span class="hll"><span class="cp">#define DATA 3</span><span class="error2">&lt;--- Advisory - Macro declared but not used</span>
+<a id="line-26" name="line-26"></a><span class="hll"><span class="cp">#define DATA 3</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-27" name="line-27"></a>
 <a id="line-28" name="line-28"></a><span class="cm">/* Compliant - #undef counts as use of M1 */</span><span class="w"></span>
 <a id="line-29" name="line-29"></a><span class="cp">#define M1 This</span>
 <a id="line-30" name="line-30"></a>
 <a id="line-31" name="line-31"></a><span class="w">   </span><span class="n">use_int16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">SIZE</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-32" name="line-32"></a>
-<a id="line-33" name="line-33"></a><span class="hll"><span class="cp">#undef M1  </span><span class="cm">/* breaks R.20.5 */</span><span class="cp"></span><span class="error2">&lt;--- Advisory - Use of #undef is not permitted</span>
+<a id="line-33" name="line-33"></a><span class="hll"><span class="cp">#undef M1  </span><span class="cm">/* breaks R.20.5 */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-34" name="line-34"></a><span class="p">}</span><span class="w"></span>
 <a id="line-35" name="line-35"></a>
 <a id="line-36" name="line-36"></a><span class="cm">/* end of R_02_05.c */</span><span class="w"></span>

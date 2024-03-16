@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\D_04_01.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\D_04_01.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\D_04_01.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\D_04_01.c</p>
 <a href="0.html#line-64"> constVariable 64</a><a href="0.html#line-64"> misra-c2012-7.4 64</a>
     </div>
     <div id="content">
@@ -364,7 +364,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-61" name="line-61"></a><span class="w">    </span><span class="n">use_float32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f5</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-62" name="line-62"></a>
 <a id="line-63" name="line-63"></a>
-<a id="line-64" name="line-64"></a><span class="hll"><span class="w">          </span><span class="kt">char</span><span class="w"> </span><span class="n">msg_buffer</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">MAX_MSG_SIZE</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;message&quot;</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Variable 'msg_buffer' can be declared as const array</span><span class="error2">&lt;--- No text specified</span>
+<a id="line-64" name="line-64"></a><span class="hll"><span class="w">          </span><span class="kt">char</span><span class="w"> </span><span class="n">msg_buffer</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">MAX_MSG_SIZE</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;message&quot;</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Variable 'msg_buffer' can be declared as const array</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-65" name="line-65"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">payload</span><span class="p">;</span><span class="w"></span>
 <a id="line-66" name="line-66"></a>
 <a id="line-67" name="line-67"></a><span class="w">    </span><span class="n">payload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg_body</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">msg_buffer</span><span class="w"> </span><span class="p">);</span><span class="w"></span>

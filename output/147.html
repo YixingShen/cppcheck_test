@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_22_03.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_22_02.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_22_03.c</p>
-<a href="147.html#line-24"> misra-c2012-21.6 24</a><a href="147.html#line-26"> misra-c2012-5.9 26</a><a href="147.html#line-32"> incompatibleFileOpen 32</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_22_02.c</p>
+<a href="147.html#line-25"> misra-c2012-5.9 25</a><a href="147.html#line-27"> misra-c2012-5.8 27</a><a href="147.html#line-29"> autovarInvalidDeallocation 29</a><a href="147.html#line-29"> misra-c2012-21.3 29</a><a href="147.html#line-33"> misra-c2012-5.9 33</a><a href="147.html#line-35"> cstyleCast 35</a><a href="147.html#line-35"> misra-c2012-21.3 35</a><a href="147.html#line-45"> doubleFree 45</a><a href="147.html#line-45"> misra-c2012-21.3 45</a><a href="147.html#line-46"> misra-c2012-21.3 46</a><a href="147.html#line-48"> cstyleCast 48</a><a href="147.html#line-48"> misra-c2012-21.3 48</a><a href="147.html#line-50"> doubleFree 50</a><a href="147.html#line-50"> misra-c2012-21.3 50</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -271,7 +271,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
 <a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
@@ -282,42 +294,54 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.22.3</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.22.2</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * The same file shall not be open for read and write access at the same time </span>
-<a id="line-15" name="line-15"></a><span class="cm"> * on different streams </span>
+<a id="line-14" name="line-14"></a><span class="cm"> * A block of memory shall only be freed if it was allocated by means of a </span>
+<a id="line-15" name="line-15"></a><span class="cm"> * Standard Library function</span>
 <a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-17" name="line-17"></a>
-<a id="line-18" name="line-18"></a><span class="cm">/* Note: This file also contains violations of rule R.21.6 */</span><span class="w"></span>
+<a id="line-18" name="line-18"></a><span class="cm">/* Note: This file also contains violations of rule R.21.3 */</span><span class="w"></span>
 <a id="line-19" name="line-19"></a>
-<a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
-<a id="line-22" name="line-22"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
-<a id="line-23" name="line-23"></a>
-<a id="line-24" name="line-24"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-25" name="line-25"></a>
-<a id="line-26" name="line-26"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fn3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-27" name="line-27"></a><span class="p">{</span><span class="w"></span>
-<a id="line-28" name="line-28"></a><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">value1</span><span class="p">;</span><span class="w"></span>
-<a id="line-29" name="line-29"></a><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">value2</span><span class="p">;</span><span class="w"></span>
-<a id="line-30" name="line-30"></a>
-<a id="line-31" name="line-31"></a><span class="w">   </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">&quot;tmp3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;r+&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-32" name="line-32"></a><span class="hll"><span class="w">   </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">&quot;tmp3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;r&quot;</span><span class="w"> </span><span class="p">);</span><span class="w">   </span><span class="cm">/* Non_compliant */</span><span class="w"></span><span class="error2">&lt;--- The file '"tmp3"' is opened for read and write access at the same time on different streams</span>
-</span><a id="line-33" name="line-33"></a>
-<a id="line-34" name="line-34"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fscanf</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value1</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-35" name="line-35"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fscanf</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fw</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value2</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-36" name="line-36"></a>
-<a id="line-37" name="line-37"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value2</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-38" name="line-38"></a>
-<a id="line-39" name="line-39"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fclose</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-40" name="line-40"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fclose</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-41" name="line-41"></a><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<a id="line-42" name="line-42"></a>
-<a id="line-43" name="line-43"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_22_3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-44" name="line-44"></a><span class="p">{</span><span class="w"></span>
-<a id="line-45" name="line-45"></a><span class="w">   </span><span class="n">fn3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-46" name="line-46"></a><span class="p">}</span><span class="w"></span>
-<a id="line-47" name="line-47"></a><span class="cm">/* end of R_22_03.c */</span><span class="w"></span>
+<a id="line-20" name="line-20"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
+<a id="line-21" name="line-21"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-22" name="line-22"></a>
+<a id="line-23" name="line-23"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<a id="line-24" name="line-24"></a>
+<a id="line-25" name="line-25"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fn</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-26" name="line-26"></a><span class="p">{</span><span class="w"></span>
+<a id="line-27" name="line-27"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-28" name="line-28"></a>
+<a id="line-29" name="line-29"></a><span class="hll"><span class="w">   </span><span class="n">free</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="w"> </span><span class="p">);</span><span class="w">                        </span><span class="cm">/* Non-compliant - a does not point to allocated storage    */</span><span class="w"></span><span class="error2">&lt;--- Deallocating memory that was not dynamically allocated</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-30" name="line-30"></a><span class="p">}</span><span class="w"></span>
+<a id="line-31" name="line-31"></a>
+<a id="line-32" name="line-32"></a>
+<a id="line-33" name="line-33"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w">  </span><span class="nf">g</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-34" name="line-34"></a><span class="p">{</span><span class="w"></span>
+<a id="line-35" name="line-35"></a><span class="hll"><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">512</span><span class="w"> </span><span class="p">);</span><span class="w"></span><div class="verbose expandable"><span class="error2">&lt;--- C-style pointer casting <span class="marker">[+]</span></span><div class="content">C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected.</div></div><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-36" name="line-36"></a><span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+<a id="line-37" name="line-37"></a>
+<a id="line-38" name="line-38"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-39" name="line-39"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
+<a id="line-40" name="line-40"></a><span class="w">      </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"></span>
+<a id="line-41" name="line-41"></a><span class="w">      </span><span class="n">use_char</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-42" name="line-42"></a><span class="w">      </span><span class="n">use_char</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-43" name="line-43"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a id="line-44" name="line-44"></a>
+<a id="line-45" name="line-45"></a><span class="hll"><span class="w">   </span><span class="n">free</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Memory pointed to by 'p' is freed twice.</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-46" name="line-46"></a><span class="hll"><span class="w">   </span><span class="n">free</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">);</span><span class="w">                         </span><span class="cm">/* Non-compliant: allocated block freed a second time       */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-47" name="line-47"></a>
+<a id="line-48" name="line-48"></a><span class="hll"><span class="w">   </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="n">realloc</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* Non-compliant: allocated block may be freed a third time */</span><span class="w"></span><div class="verbose expandable"><span class="error2">&lt;--- C-style pointer casting <span class="marker">[+]</span></span><div class="content">C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected.</div></div><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-49" name="line-49"></a>
+<a id="line-50" name="line-50"></a><span class="hll"><span class="w">   </span><span class="n">free</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Memory pointed to by 'p' is freed twice.</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-51" name="line-51"></a><span class="p">}</span><span class="w"></span>
+<a id="line-52" name="line-52"></a>
+<a id="line-53" name="line-53"></a><span class="kt">void</span><span class="w">  </span><span class="nf">R_22_2</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
+<a id="line-54" name="line-54"></a><span class="p">{</span><span class="w"></span>
+<a id="line-55" name="line-55"></a><span class="w">  </span><span class="n">fn</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-56" name="line-56"></a><span class="w">  </span><span class="n">g</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-57" name="line-57"></a><span class="p">}</span><span class="w"></span>
+<a id="line-58" name="line-58"></a>
+<a id="line-59" name="line-59"></a><span class="cm">/* end of R_22_02.c */</span><span class="w"></span>
 </pre></div></td></tr></table></div>
 
     </div>

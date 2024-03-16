@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_16_02.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_16_02.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_16_02.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_16_02.c</p>
 <a href="87.html#line-29"> misra-c2012-14.4 29</a><a href="87.html#line-31"> misra-c2012-16.2 31</a>
     </div>
     <div id="content">
@@ -295,9 +295,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-26" name="line-26"></a><span class="w">   </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-27" name="line-27"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
 <a id="line-28" name="line-28"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"></span>
-<a id="line-29" name="line-29"></a><span class="hll"><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- Required - Non-Boolean type expression used in an if statement or the conditional iteration statement of a loop</span>
+<a id="line-29" name="line-29"></a><span class="hll"><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-30" name="line-30"></a><span class="w">         </span><span class="p">{</span><span class="w"></span>
-<a id="line-31" name="line-31"></a><span class="hll"><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">           </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-31" name="line-31"></a><span class="hll"><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">           </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-32" name="line-32"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <a id="line-33" name="line-33"></a><span class="w">         </span><span class="p">}</span><span class="w"></span>
 <a id="line-34" name="line-34"></a><span class="w">         </span><span class="k">break</span><span class="p">;</span><span class="w"></span>

@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_04_01.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_04_01.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_04_01.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_04_01.c</p>
 <a href="12.html#line-22"> misra-c2012-4.1 22</a><a href="12.html#line-26"> misra-c2012-4.1 26</a>
     </div>
     <div id="content">
@@ -280,11 +280,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-19" name="line-19"></a>
 <a id="line-20" name="line-20"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_4_1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-21" name="line-21"></a><span class="p">{</span><span class="w"></span>
-<a id="line-22" name="line-22"></a><span class="hll"><span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\x41</span><span class="s">g&quot;</span><span class="p">;</span><span class="w">     </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-22" name="line-22"></a><span class="hll"><span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\x41</span><span class="s">g&quot;</span><span class="p">;</span><span class="w">     </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-23" name="line-23"></a><span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\x41</span><span class="s">&quot;</span><span class="w"> </span><span class="s">&quot;g&quot;</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Compliant - terminated by end of literal */</span><span class="w"></span>
 <a id="line-24" name="line-24"></a><span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\x41\x67</span><span class="s">&quot;</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Compliant - terminated by another escape */</span><span class="w"></span>
 <a id="line-25" name="line-25"></a>
-<a id="line-26" name="line-26"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;\</span><span class="mi">141</span><span class="n">t</span><span class="err">&#39;</span><span class="p">;</span><span class="w">       </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-26" name="line-26"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;\</span><span class="mi">141</span><span class="n">t</span><span class="err">&#39;</span><span class="p">;</span><span class="w">       </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-27" name="line-27"></a><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;\</span><span class="mi">141</span><span class="err">\</span><span class="n">t</span><span class="err">&#39;</span><span class="p">;</span><span class="w">      </span><span class="cm">/* Compliant - terminated by another escape */</span><span class="w"></span>
 <a id="line-28" name="line-28"></a>
 <a id="line-29" name="line-29"></a><span class="w">   </span><span class="n">use_const_char_ptr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="p">);</span><span class="w"></span>

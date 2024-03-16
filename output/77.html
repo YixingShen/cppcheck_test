@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_14_03.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_14_03.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_14_03.c</p>
-<a href="77.html#line-22"> misra-c2012-5.9 22</a><a href="77.html#line-44"> misra-c2012-5.9 44</a><a href="77.html#line-44"> misra-c2012-5.8 44</a><a href="77.html#line-46"> knownConditionTrueFalse 46</a><a href="77.html#line-49"> knownConditionTrueFalse 49</a><a href="77.html#line-69"> compareValueOutOfTypeRangeError 69</a><a href="77.html#line-69"> unsignedLessThanZero 69</a><a href="77.html#line-72"> compareValueOutOfTypeRangeError 72</a><a href="77.html#line-82"> incorrectLogicOperator 82</a><a href="77.html#line-86"> incorrectLogicOperator 86</a><a href="77.html#line-90"> knownConditionTrueFalse 90</a><a href="77.html#line-92"> knownConditionTrueFalse 92</a><a href="77.html#line-103"> compareValueOutOfTypeRangeError 103</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_14_03.c</p>
+<a href="77.html#line-22"> misra-c2012-5.9 22</a><a href="77.html#line-44"> misra-c2012-5.9 44</a><a href="77.html#line-46"> knownConditionTrueFalse 46</a><a href="77.html#line-49"> knownConditionTrueFalse 49</a><a href="77.html#line-69"> compareValueOutOfTypeRangeError 69</a><a href="77.html#line-69"> unsignedLessThanZero 69</a><a href="77.html#line-72"> compareValueOutOfTypeRangeError 72</a><a href="77.html#line-82"> incorrectLogicOperator 82</a><a href="77.html#line-86"> incorrectLogicOperator 86</a><a href="77.html#line-90"> knownConditionTrueFalse 90</a><a href="77.html#line-92"> knownConditionTrueFalse 92</a><a href="77.html#line-103"> compareValueOutOfTypeRangeError 103</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
@@ -359,7 +359,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
 <a id="line-20" name="line-20"></a>
 <a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-22" name="line-22"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-23" name="line-23"></a><span class="p">{</span><span class="w"></span>
 <a id="line-24" name="line-24"></a><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100U</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Differs from Example in document as given specific value */</span><span class="w"></span>
 <a id="line-25" name="line-25"></a><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span><span class="w"></span>
@@ -381,7 +381,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-41" name="line-41"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-42" name="line-42"></a><span class="p">}</span><span class="w"></span>
 <a id="line-43" name="line-43"></a>
-<a id="line-44" name="line-44"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- No text specified</span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
+<a id="line-44" name="line-44"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-45" name="line-45"></a><span class="p">{</span><span class="w"></span>
 <a id="line-46" name="line-46"></a><span class="hll"><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">numcyl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4u</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- 'numcyl' is assigned value '4u' here.</span>
 </span><a id="line-47" name="line-47"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">numcyl_cal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4u</span><span class="p">;</span><span class="w"></span>

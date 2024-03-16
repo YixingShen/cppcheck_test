@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_07_02.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_07_02.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_07_02.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_07_02.c</p>
 <a href="24.html#line-30"> misra-c2012-7.2 30</a>
     </div>
     <div id="content">
@@ -289,7 +289,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-27" name="line-27"></a><span class="w">       </span><span class="n">use_int32</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="mh">0x7FFFFFFF</span><span class="w"> </span><span class="p">);</span><span class="w">          </span><span class="cm">/* int constant */</span><span class="w"></span>
 <a id="line-28" name="line-28"></a><span class="w">       </span><span class="n">use_int64</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="mi">2147483648</span><span class="w"> </span><span class="p">);</span><span class="w">          </span><span class="cm">/* long constant */</span><span class="w"></span>
 <a id="line-29" name="line-29"></a><span class="w">       </span><span class="n">use_uint32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2147483648U</span><span class="w"> </span><span class="p">);</span><span class="w">         </span><span class="cm">/* unsigned int constant */</span><span class="w"></span>
-<a id="line-30" name="line-30"></a><span class="hll"><span class="w">       </span><span class="n">use_uint32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80000000</span><span class="w"> </span><span class="p">);</span><span class="w">          </span><span class="cm">/* unsigned int constant -  Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- Required - All unsigned integer constants must have a 'u' or 'U' suffix</span>
+<a id="line-30" name="line-30"></a><span class="hll"><span class="w">       </span><span class="n">use_uint32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80000000</span><span class="w"> </span><span class="p">);</span><span class="w">          </span><span class="cm">/* unsigned int constant -  Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-31" name="line-31"></a><span class="w">       </span><span class="n">use_uint32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mh">0x80000000U</span><span class="w"> </span><span class="p">);</span><span class="w">         </span><span class="cm">/* unsigned int constant */</span><span class="w"></span>
 <a id="line-32" name="line-32"></a>
 <a id="line-33" name="line-33"></a>

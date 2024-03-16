@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_05_08_1.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_05_08_1.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_05_08_1.c</p>
-<a href="19.html#line-22"> misra-c2012-8.4 22</a><a href="19.html#line-22"> misra-c2012-5.8 22</a><a href="19.html#line-25"> misra-c2012-8.4 25</a><a href="19.html#line-25"> misra-c2012-5.8 25</a><a href="19.html#line-25"> misra-c2012-8.7 25</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_05_08_1.c</p>
+<a href="19.html#line-22"> misra-c2012-8.4 22</a><a href="19.html#line-25"> misra-c2012-8.4 25</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -289,10 +289,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;R_05_08.h&quot;</span><span class="cp"></span>
 <a id="line-20" name="line-20"></a>
 <a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a><span class="hll"><span class="kt">int32_t</span><span class="w"> </span><span class="n">count8</span><span class="p">;</span><span class="w">           </span><span class="cm">/* &quot;count8&quot; has external linkage - Note: breaks R.8.4 */</span><span class="w"></span><span class="error2">&lt;--- Required - Functions must have a prototype and prototype arguements/return types must match</span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
+<a id="line-22" name="line-22"></a><span class="hll"><span class="kt">int32_t</span><span class="w"> </span><span class="n">count8</span><span class="p">;</span><span class="w">           </span><span class="cm">/* &quot;count8&quot; has external linkage - Note: breaks R.8.4 */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-23" name="line-23"></a>
 <a id="line-24" name="line-24"></a><span class="cm">/* Note: foo8 has intentionally no separate declaration, breaks R.8.4 */</span><span class="w"></span>
-<a id="line-25" name="line-25"></a><span class="hll"><span class="kt">void</span><span class="w"> </span><span class="nf">foo8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w">        </span><span class="cm">/* &quot;foo8&quot; has external linkage   */</span><span class="w"></span><span class="error2">&lt;--- Required - Functions must have a prototype and prototype arguements/return types must match</span><span class="error2">&lt;--- Required - All identifiers must be unique</span><span class="error2">&lt;--- Advisory - Objects and functions should only be made available externally if required</span>
+<a id="line-25" name="line-25"></a><span class="hll"><span class="kt">void</span><span class="w"> </span><span class="nf">foo8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w">        </span><span class="cm">/* &quot;foo8&quot; has external linkage   */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-26" name="line-26"></a><span class="p">{</span><span class="w"></span>
 <a id="line-27" name="line-27"></a><span class="w">   </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">index</span><span class="p">;</span><span class="w">         </span><span class="cm">/* compliant - &quot;index&quot; has no linkage       */</span><span class="w"></span>
 <a id="line-28" name="line-28"></a>

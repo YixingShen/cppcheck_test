@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_02_04.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_02_03.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_02_04.c</p>
-<a href="192.html#line-24"> misra-c2012-2.4 24</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_02_03.c</p>
+<a href="192.html#line-23"> misra-c2012-2.3 23</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -257,58 +257,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
-<a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-11-01</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
 <a id="line-5" name="line-5"></a><span class="cm"> *</span>
@@ -318,78 +268,28 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.2.4</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.2.3</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * A project should not contain unused tag declarations</span>
+<a id="line-14" name="line-14"></a><span class="cm"> * A project should not contain unused type declarations</span>
 <a id="line-15" name="line-15"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-16" name="line-16"></a>
-<a id="line-17" name="line-17"></a>
-<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
-<a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-17" name="line-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
+<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-19" name="line-19"></a>
 <a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">unusedtag</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-21" name="line-21"></a><span class="k">static</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="nf">unusedtype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-22" name="line-22"></a><span class="p">{</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="w">   </span><span class="k">enum</span><span class="w"> </span><span class="nc">state</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="hll"><span class="w">   </span><span class="p">{</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-25" name="line-25"></a><span class="w">      </span><span class="n">S_init</span><span class="p">,</span><span class="w"> </span><span class="n">S_run</span><span class="p">,</span><span class="w"> </span><span class="n">S_sleep</span><span class="w"></span>
-<a id="line-26" name="line-26"></a><span class="w">   </span><span class="p">};</span><span class="w"> </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
+<a id="line-23" name="line-23"></a><span class="hll"><span class="w">   </span><span class="k">typedef</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">local_Type</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-24" name="line-24"></a>
+<a id="line-25" name="line-25"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">67</span><span class="p">;</span><span class="w"></span>
+<a id="line-26" name="line-26"></a><span class="p">}</span><span class="w"></span>
 <a id="line-27" name="line-27"></a>
-<a id="line-28" name="line-28"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-29" name="line-29"></a><span class="p">}</span><span class="w"></span>
-<a id="line-30" name="line-30"></a>
-<a id="line-31" name="line-31"></a>
-<a id="line-32" name="line-32"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record_t</span><span class="w">  </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
-<a id="line-33" name="line-33"></a><span class="p">{</span><span class="w"></span>
-<a id="line-34" name="line-34"></a><span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">key</span><span class="p">;</span><span class="w"></span>
-<a id="line-35" name="line-35"></a><span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"></span>
-<a id="line-36" name="line-36"></a><span class="p">}</span><span class="w"> </span><span class="n">record1_t</span><span class="p">;</span><span class="w"></span>
-<a id="line-37" name="line-37"></a>
-<a id="line-38" name="line-38"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w">  </span><span class="cm">/* Compliant */</span><span class="w"></span>
-<a id="line-39" name="line-39"></a><span class="p">{</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">key</span><span class="p">;</span><span class="w"></span>
-<a id="line-40" name="line-40"></a><span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"></span>
-<a id="line-41" name="line-41"></a><span class="p">}</span><span class="w"> </span><span class="n">record2_t</span><span class="p">;</span><span class="w"></span>
-<a id="line-42" name="line-42"></a>
-<a id="line-43" name="line-43"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">use_recordtypes</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-44" name="line-44"></a><span class="p">{</span><span class="w"></span>
-<a id="line-45" name="line-45"></a><span class="w">   </span><span class="n">record1_t</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">3U</span><span class="p">,</span><span class="w"> </span><span class="mi">2U</span><span class="p">};</span><span class="w"></span>
-<a id="line-46" name="line-46"></a><span class="w">   </span><span class="n">record2_t</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4U</span><span class="p">,</span><span class="w"> </span><span class="mi">5U</span><span class="p">};</span><span class="w"></span>
-<a id="line-47" name="line-47"></a>
-<a id="line-48" name="line-48"></a><span class="w">   </span><span class="n">use_uint16</span><span class="p">(</span><span class="w"> </span><span class="n">r1</span><span class="p">.</span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r1</span><span class="p">.</span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r2</span><span class="p">.</span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r2</span><span class="p">.</span><span class="n">val</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-49" name="line-49"></a><span class="p">}</span><span class="w"></span>
-<a id="line-50" name="line-50"></a>
-<a id="line-51" name="line-51"></a><span class="k">struct</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
-<a id="line-52" name="line-52"></a><span class="p">{</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">a1</span><span class="p">;</span><span class="w"></span>
-<a id="line-53" name="line-53"></a><span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">a2</span><span class="p">;</span><span class="w"></span>
-<a id="line-54" name="line-54"></a><span class="p">};</span><span class="w">                </span><span class="cm">/* Compliant     */</span><span class="w"></span>
-<a id="line-55" name="line-55"></a>
-<a id="line-56" name="line-56"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="n">Atype</span><span class="p">;</span><span class="w"></span>
-<a id="line-57" name="line-57"></a><span class="w">     </span><span class="cm">/* no subsequent use of identifier &quot;A&quot; */</span><span class="w"></span>
-<a id="line-58" name="line-58"></a>
-<a id="line-59" name="line-59"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">B</span><span class="w"></span>
-<a id="line-60" name="line-60"></a><span class="p">{</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">b1</span><span class="p">;</span><span class="w"></span>
-<a id="line-61" name="line-61"></a><span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">b2</span><span class="p">;</span><span class="w"></span>
-<a id="line-62" name="line-62"></a><span class="p">}</span><span class="w"> </span><span class="n">Btype</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
-<a id="line-63" name="line-63"></a><span class="w">    </span><span class="cm">/* no subsequent use of identifier &quot;B&quot;  */</span><span class="w"></span>
-<a id="line-64" name="line-64"></a>
-<a id="line-65" name="line-65"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"></span>
-<a id="line-66" name="line-66"></a><span class="p">{</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span><span class="w"></span>
-<a id="line-67" name="line-67"></a><span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span><span class="w"></span>
-<a id="line-68" name="line-68"></a><span class="p">}</span><span class="w"> </span><span class="n">Ctype</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Compliant     */</span><span class="w"></span>
-<a id="line-69" name="line-69"></a>
-<a id="line-70" name="line-70"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_2_4</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-71" name="line-71"></a><span class="p">{</span><span class="w"></span>
-<a id="line-72" name="line-72"></a><span class="w">   </span><span class="n">Atype</span><span class="w"> </span><span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<a id="line-73" name="line-73"></a><span class="w">   </span><span class="n">Btype</span><span class="w"> </span><span class="n">bx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<a id="line-74" name="line-74"></a><span class="w">   </span><span class="n">Ctype</span><span class="w"> </span><span class="n">cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<a id="line-75" name="line-75"></a>
-<a id="line-76" name="line-76"></a><span class="w">   </span><span class="n">use_recordtypes</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-77" name="line-77"></a><span class="w">   </span><span class="n">unusedtag</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-78" name="line-78"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ax</span><span class="p">.</span><span class="n">a1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ax</span><span class="p">.</span><span class="n">a2</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-79" name="line-79"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">bx</span><span class="p">.</span><span class="n">b1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bx</span><span class="p">.</span><span class="n">b2</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-80" name="line-80"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">cx</span><span class="p">.</span><span class="n">c1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cx</span><span class="p">.</span><span class="n">c2</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-81" name="line-81"></a><span class="p">}</span><span class="w"></span>
-<a id="line-82" name="line-82"></a>
-<a id="line-83" name="line-83"></a><span class="cm">/* end of R_02_04.c */</span><span class="w"></span>
+<a id="line-28" name="line-28"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_2_3</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-29" name="line-29"></a><span class="p">{</span><span class="w"></span>
+<a id="line-30" name="line-30"></a><span class="w">   </span><span class="n">use_int16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">unusedtype</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-31" name="line-31"></a><span class="p">}</span><span class="w"></span>
+<a id="line-32" name="line-32"></a>
+<a id="line-33" name="line-33"></a><span class="cm">/* end of R_02_03.c */</span><span class="w"></span>
 </pre></div></td></tr></table></div>
 
     </div>

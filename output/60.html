@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_11_07.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_11_07.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_11_07.c</p>
-<a href="60.html#line-24"> variableScope 24</a><a href="60.html#line-28"> misra-c2012-11.7 28</a><a href="60.html#line-29"> misra-c2012-11.7 29</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_11_07.c</p>
+<a href="60.html#line-24"> variableScope 24</a><a href="60.html#line-28"> misra-c2012-11.7 28</a><a href="60.html#line-29"> cstyleCast 29</a><a href="60.html#line-29"> misra-c2012-11.7 29</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -299,8 +299,8 @@ When you see this message it is always safe to reduce the variable scope 1 level
 </span><a id="line-25" name="line-25"></a>
 <a id="line-26" name="line-26"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-27" name="line-27"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
-<a id="line-28" name="line-28"></a><span class="hll"><span class="w">     </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w">          </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-29" name="line-29"></a><span class="hll"><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w">          </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-28" name="line-28"></a><span class="hll"><span class="w">     </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">float32_t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w">          </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-29" name="line-29"></a><span class="hll"><span class="w">     </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w">          </span><span class="cm">/* Non-compliant */</span><span class="w"></span><div class="verbose expandable"><span class="error2">&lt;--- C-style pointer casting <span class="marker">[+]</span></span><div class="content">C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected.</div></div><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-30" name="line-30"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-31" name="line-31"></a>
 <a id="line-32" name="line-32"></a><span class="w">   </span><span class="n">use_int16_ptr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">);</span><span class="w"></span>

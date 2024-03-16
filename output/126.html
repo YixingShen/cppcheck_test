@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_21_02.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_21_01.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_21_02.c</p>
-<a href="126.html#line-28"> misra-c2012-20.1 28</a><a href="126.html#line-31"> misra-c2012-8.14 31</a><a href="126.html#line-32"> misra-c2012-8.14 32</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_21_01.c</p>
+<a href="126.html#line-22"> misra-c2012-20.5 22</a><a href="126.html#line-23"> misra-c2012-21.1 23</a><a href="126.html#line-24"> misra-c2012-20.5 24</a><a href="126.html#line-28"> misra-c2012-21.1 28</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -270,7 +270,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">43</span>
 <span class="normal">44</span>
 <span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
 <a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-11-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
@@ -281,41 +284,44 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.21.2</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.21.1</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * A reserved identifier or reserved macro name shall not be declared</span>
-<a id="line-15" name="line-15"></a><span class="cm"> */</span><span class="w"></span>
-<a id="line-16" name="line-16"></a>
-<a id="line-17" name="line-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
-<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
-<a id="line-19" name="line-19"></a>
-<a id="line-20" name="line-20"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span><span class="cp"></span>
+<a id="line-14" name="line-14"></a><span class="cm"> * #define and #undef shall not be used on a reserved identifier or reserved </span>
+<a id="line-15" name="line-15"></a><span class="cm"> * macro name</span>
+<a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
+<a id="line-17" name="line-17"></a>
+<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
+<a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-20" name="line-20"></a>
 <a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a>
-<a id="line-23" name="line-23"></a><span class="k">static</span><span class="w"> </span><span class="n">float64_t</span><span class="w"> </span><span class="nf">_BUILTIN_sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">float64_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* Non-compliant, also breaks R.20.1  */</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="p">{</span><span class="w"></span>
-<a id="line-25" name="line-25"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
-<a id="line-26" name="line-26"></a><span class="p">}</span><span class="w"></span>
-<a id="line-27" name="line-27"></a>
-<a id="line-28" name="line-28"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span><span class="error2">&lt;--- Required - Only comments and prepropccesor directives can come before #include statements</span>
-</span><a id="line-29" name="line-29"></a><span class="cm">/* break R.20.1 */</span><span class="w"></span>
-<a id="line-30" name="line-30"></a>
-<a id="line-31" name="line-31"></a><span class="hll"><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">memcpy</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-32" name="line-32"></a><span class="hll"><span class="w">                     </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="cm">/* also breaks R.8.14   */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-33" name="line-33"></a><span class="w">                     </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w">                </span><span class="cm">/* Non-compliant        */</span><span class="w"></span>
-<a id="line-34" name="line-34"></a>
-<a id="line-35" name="line-35"></a>
-<a id="line-36" name="line-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_21_2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-37" name="line-37"></a><span class="p">{</span><span class="w"></span>
-<a id="line-38" name="line-38"></a><span class="w">   </span><span class="n">float64_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">float64_t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* sqrt may not behave as defined in the standard */</span><span class="w"></span>
-<a id="line-39" name="line-39"></a>
-<a id="line-40" name="line-40"></a><span class="w">   </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_BUILTIN_sqrt</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-41" name="line-41"></a><span class="w">   </span><span class="n">use_float64</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-42" name="line-42"></a>
-<a id="line-43" name="line-43"></a><span class="p">}</span><span class="w"></span>
-<a id="line-44" name="line-44"></a>
-<a id="line-45" name="line-45"></a><span class="cm">/* end of R_21_02.c */</span><span class="w"></span>
-<a id="line-46" name="line-46"></a>
+<a id="line-22" name="line-22"></a><span class="hll"><span class="cp">#undef __LINE__        </span><span class="cm">/* Non-compliant, also breaks R.20.5 */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-23" name="line-23"></a><span class="hll"><span class="cp">#define _GUARD_H 1     </span><span class="cm">/* Non-compliant                     */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-24" name="line-24"></a><span class="hll"><span class="cp">#undef _BUILTIN_sqrt   </span><span class="cm">/* Non-compliant, also breaks R.20.5 */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-25" name="line-25"></a>
+<a id="line-26" name="line-26"></a>
+<a id="line-27" name="line-27"></a><span class="cp">#define defined        </span><span class="cm">/* Non-compliant - reserved identifier  */</span><span class="cp"></span>
+<a id="line-28" name="line-28"></a><span class="hll"><span class="cp">#define errno my_errno </span><span class="cm">/* Non-compliant - library identifier   */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-29" name="line-29"></a>
+<a id="line-30" name="line-30"></a><span class="cm">/* Compliant - rule doesn&#39;t include future library directions */</span><span class="w"></span>
+<a id="line-31" name="line-31"></a><span class="cp">#define isneg( x ) ( ( x ) &lt; 0 )  </span><span class="cm">/* breaks D.4.9 */</span><span class="cp"></span>
+<a id="line-32" name="line-32"></a>
+<a id="line-33" name="line-33"></a>
+<a id="line-34" name="line-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_21_1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-35" name="line-35"></a><span class="p">{</span><span class="w"></span>
+<a id="line-36" name="line-36"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">isneg</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">get_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-37" name="line-37"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
+<a id="line-38" name="line-38"></a><span class="w">      </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">_GUARD_H</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-39" name="line-39"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a id="line-40" name="line-40"></a><span class="w">   </span><span class="k">else</span><span class="w"></span>
+<a id="line-41" name="line-41"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
+<a id="line-42" name="line-42"></a><span class="w">      </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">my_errno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-43" name="line-43"></a><span class="w">      </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">my_errno</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-44" name="line-44"></a><span class="w">      </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">errno</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-45" name="line-45"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a id="line-46" name="line-46"></a><span class="p">}</span><span class="w"></span>
+<a id="line-47" name="line-47"></a>
+<a id="line-48" name="line-48"></a><span class="cm">/* end of R_21_01.c */</span><span class="w"></span>
+<a id="line-49" name="line-49"></a>
 </pre></div></td></tr></table></div>
 
     </div>

@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_14_04.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_14_04.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_14_04.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_14_04.c</p>
 <a href="78.html#line-29"> misra-c2012-14.4 29</a><a href="78.html#line-39"> misra-c2012-14.4 39</a><a href="78.html#line-44"> duplicateCondition 44</a><a href="78.html#line-44"> misra-c2012-14.4 44</a><a href="78.html#line-48"> duplicateCondition 48</a>
     </div>
     <div id="content">
@@ -310,7 +310,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-26" name="line-26"></a><span class="w">   </span><span class="n">bool_t</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_bool</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-27" name="line-27"></a><span class="w">   </span><span class="kt">int32_t</span><span class="w">   </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-28" name="line-28"></a>
-<a id="line-29" name="line-29"></a><span class="hll"><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">)</span><span class="w">           </span><span class="cm">/* Non-compliant - p is a pointer */</span><span class="w"></span><span class="error2">&lt;--- Required - Non-Boolean type expression used in an if statement or the conditional iteration statement of a loop</span>
+<a id="line-29" name="line-29"></a><span class="hll"><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">)</span><span class="w">           </span><span class="cm">/* Non-compliant - p is a pointer */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-30" name="line-30"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
 <a id="line-31" name="line-31"></a><span class="w">      </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int32_ptr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-32" name="line-32"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
@@ -320,12 +320,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-36" name="line-36"></a><span class="w">      </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int32_ptr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-37" name="line-37"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-38" name="line-38"></a>
-<a id="line-39" name="line-39"></a><span class="hll"><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="p">)</span><span class="w">       </span><span class="cm">/* Compliant */</span><span class="w"></span><span class="error2">&lt;--- Required - Non-Boolean type expression used in an if statement or the conditional iteration statement of a loop</span>
+<a id="line-39" name="line-39"></a><span class="hll"><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="p">)</span><span class="w">       </span><span class="cm">/* Compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-40" name="line-40"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
 <a id="line-41" name="line-41"></a><span class="w">      </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_bool</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <a id="line-42" name="line-42"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-43" name="line-43"></a>
-<a id="line-44" name="line-44"></a><span class="hll"><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w">             </span><span class="cm">/* Non Compliant */</span><span class="w"></span><span class="error2">&lt;--- First condition</span><span class="error2">&lt;--- Required - Non-Boolean type expression used in an if statement or the conditional iteration statement of a loop</span>
+<a id="line-44" name="line-44"></a><span class="hll"><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w">             </span><span class="cm">/* Non Compliant */</span><span class="w"></span><span class="error2">&lt;--- First condition</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-45" name="line-45"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
 <a id="line-46" name="line-46"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
 <a id="line-47" name="line-47"></a>

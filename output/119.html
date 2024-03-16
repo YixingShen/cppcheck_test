@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_20_09.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_20_08.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_20_09.c</p>
-<a href="119.html#line-21"> misra-c2012-20.9 21</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_20_08.c</p>
+<a href="119.html#line-27"> misra-c2012-20.8 27</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -265,7 +265,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
 <a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
@@ -276,36 +280,40 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.20.9</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.20.8</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * All identifiers used in the controlling expression of #if or #elif </span>
-<a id="line-15" name="line-15"></a><span class="cm"> * preprocessing directives shall be #define&#39;d before evaluation</span>
+<a id="line-14" name="line-14"></a><span class="cm"> * The controlling expression of a #if or #elif preprocessing directive shall </span>
+<a id="line-15" name="line-15"></a><span class="cm"> * evaluate to 0 or 1</span>
 <a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-17" name="line-17"></a>
 <a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
 <a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
 <a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a><span class="hll"><span class="cp">#if M == 0          </span><span class="cm">/* Non-compliant */</span><span class="cp"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-22" name="line-22"></a><span class="w">                    </span><span class="cm">/* Does &#39;M&#39; expand to zero or is it undefined? */</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="cp">#endif</span>
-<a id="line-24" name="line-24"></a>
-<a id="line-25" name="line-25"></a>
-<a id="line-26" name="line-26"></a><span class="cp">#if defined ( M )   </span><span class="cm">/* Compliant - M is not evaluated              */</span><span class="cp"></span>
-<a id="line-27" name="line-27"></a><span class="cp">#if M == 0          </span><span class="cm">/* Compliant - M is known to be defined        */</span><span class="cp"></span>
-<a id="line-28" name="line-28"></a><span class="w">                    </span><span class="cm">/* &#39;M&#39; must expand to zero.                    */</span><span class="w"></span>
-<a id="line-29" name="line-29"></a><span class="cp">#endif</span>
-<a id="line-30" name="line-30"></a><span class="cp">#endif</span>
-<a id="line-31" name="line-31"></a>
-<a id="line-32" name="line-32"></a><span class="cm">/* Compliant - B is only evaluated in (B == 0) if it is defined */</span><span class="w"></span>
-<a id="line-33" name="line-33"></a><span class="cp">#if defined ( B ) &amp;&amp; ( B == 0 )</span>
-<a id="line-34" name="line-34"></a><span class="cp">#endif</span>
-<a id="line-35" name="line-35"></a>
-<a id="line-36" name="line-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_20_9</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-37" name="line-37"></a><span class="p">{</span><span class="w"></span>
-<a id="line-38" name="line-38"></a><span class="w">   </span><span class="n">use_int8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-39" name="line-39"></a><span class="p">}</span><span class="w"></span>
-<a id="line-40" name="line-40"></a>
-<a id="line-41" name="line-41"></a><span class="cm">/* end of R_20_09.c */</span><span class="w"></span>
+<a id="line-21" name="line-21"></a>
+<a id="line-22" name="line-22"></a><span class="cp">#define FALSE 0</span>
+<a id="line-23" name="line-23"></a>
+<a id="line-24" name="line-24"></a><span class="cp">#if FALSE                 </span><span class="cm">/* Compliant     */</span><span class="cp"></span>
+<a id="line-25" name="line-25"></a><span class="cp">#endif</span>
+<a id="line-26" name="line-26"></a>
+<a id="line-27" name="line-27"></a><span class="hll"><span class="cp">#if 10                    </span><span class="cm">/* Non-compliant */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-28" name="line-28"></a><span class="cp">#endif</span>
+<a id="line-29" name="line-29"></a>
+<a id="line-30" name="line-30"></a>
+<a id="line-31" name="line-31"></a><span class="cp">#if ! defined ( X )        </span><span class="cm">/* Compliant    */</span><span class="cp"></span>
+<a id="line-32" name="line-32"></a><span class="cp">#endif</span>
+<a id="line-33" name="line-33"></a>
+<a id="line-34" name="line-34"></a><span class="cp">#define A 10</span>
+<a id="line-35" name="line-35"></a><span class="cp">#define B 5</span>
+<a id="line-36" name="line-36"></a>
+<a id="line-37" name="line-37"></a><span class="cp">#if  A &gt; B                 </span><span class="cm">/* Compliant    */</span><span class="cp"></span>
+<a id="line-38" name="line-38"></a><span class="cp">#endif</span>
+<a id="line-39" name="line-39"></a>
+<a id="line-40" name="line-40"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_20_8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-41" name="line-41"></a><span class="p">{</span><span class="w"></span>
+<a id="line-42" name="line-42"></a><span class="w">  </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-43" name="line-43"></a><span class="p">}</span><span class="w"></span>
+<a id="line-44" name="line-44"></a>
+<a id="line-45" name="line-45"></a><span class="cm">/* end of R_20_08.c */</span><span class="w"></span>
 </pre></div></td></tr></table></div>
 
     </div>

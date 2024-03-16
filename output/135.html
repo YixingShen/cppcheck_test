@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_21_11.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_21_10.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_21_11.c</p>
-<a href="135.html#line-19"> misra-c2012-21.11 19</a><a href="135.html#line-24"> misra-c2012-5.8 24</a><a href="135.html#line-25"> misra-c2012-5.8 25</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_21_10.c</p>
+<a href="135.html#line-19"> misra-c2012-21.10 19</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -270,29 +270,29 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.21.11</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.21.10</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * The standard header file &lt;tgmath.h&gt; shall not be used</span>
+<a id="line-14" name="line-14"></a><span class="cm"> * The Standard Library time and date routines shall not be used</span>
 <a id="line-15" name="line-15"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-16" name="line-16"></a>
 <a id="line-17" name="line-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
 <a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
-<a id="line-19" name="line-19"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tgmath.h&gt;</span><span class="c1">        /* Non-compliant */</span><span class="cp"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-19" name="line-19"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="c1">               /* Non-compliant */</span><span class="cp"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_21_11</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="p">{</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="hll"><span class="w">   </span><span class="n">float32_t</span><span class="w"> </span><span class="n">f1</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
-</span><a id="line-25" name="line-25"></a><span class="hll"><span class="w">   </span><span class="n">float32_t</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_float32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
-</span><a id="line-26" name="line-26"></a>
-<a id="line-27" name="line-27"></a><span class="w">   </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="p">);</span><span class="w">       </span><span class="cm">/* Non-compliant - generic sqrt used      */</span><span class="w"></span>
-<a id="line-28" name="line-28"></a><span class="w">   </span><span class="n">use_float32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-29" name="line-29"></a>
-<a id="line-30" name="line-30"></a><span class="w">   </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrtf</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="p">);</span><span class="w">      </span><span class="cm">/* Compliant - float version of sqrt used  */</span><span class="w"></span>
-<a id="line-31" name="line-31"></a><span class="w">   </span><span class="n">use_float32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-32" name="line-32"></a>
-<a id="line-33" name="line-33"></a><span class="p">}</span><span class="w"></span>
-<a id="line-34" name="line-34"></a><span class="cm">/* end of R_21_11.c */</span><span class="w"></span>
+<a id="line-21" name="line-21"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_21_10</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-22" name="line-22"></a><span class="p">{</span><span class="w"></span>
+<a id="line-23" name="line-23"></a><span class="w">     </span><span class="n">float64_t</span><span class="w">  </span><span class="n">time_dif</span><span class="p">;</span><span class="w"></span>
+<a id="line-24" name="line-24"></a><span class="w">     </span><span class="kt">time_t</span><span class="w">     </span><span class="n">time_1</span><span class="p">;</span><span class="w"></span>
+<a id="line-25" name="line-25"></a><span class="w">     </span><span class="kt">time_t</span><span class="w">     </span><span class="n">time_2</span><span class="p">;</span><span class="w"></span>
+<a id="line-26" name="line-26"></a>
+<a id="line-27" name="line-27"></a><span class="w">     </span><span class="n">time_1</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">clock</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w">                    </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
+<a id="line-28" name="line-28"></a><span class="w">     </span><span class="n">time_2</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">clock</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w">                    </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
+<a id="line-29" name="line-29"></a><span class="w">     </span><span class="n">time_dif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">difftime</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">time_1</span><span class="p">,</span><span class="w"> </span><span class="n">time_2</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* Non-compliant */</span><span class="w"></span>
+<a id="line-30" name="line-30"></a>
+<a id="line-31" name="line-31"></a><span class="w">     </span><span class="n">use_float64</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">time_dif</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-32" name="line-32"></a><span class="p">}</span><span class="w"></span>
+<a id="line-33" name="line-33"></a>
+<a id="line-34" name="line-34"></a><span class="cm">/* end of R_21_10.c */</span><span class="w"></span>
 <a id="line-35" name="line-35"></a>
 </pre></div></td></tr></table></div>
 

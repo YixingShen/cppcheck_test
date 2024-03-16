@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_18_07.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_18_06_1.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_18_07.c</p>
-<a href="106.html#line-24"> misra-c2012-18.7 24</a><a href="106.html#line-32"> uninitvar 32</a><a href="106.html#line-32"> misra-c2012-21.3 32</a><a href="106.html#line-46"> constVariablePointer 46</a><a href="106.html#line-46"> uninitvar 46</a><a href="106.html#line-47"> constVariablePointer 47</a><a href="106.html#line-47"> uninitvar 47</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_18_06_1.c</p>
+<a href="106.html#line-20"> misra-c2012-5.9 20</a><a href="106.html#line-22"> returnDanglingLifetime 22</a><a href="106.html#line-23"> returnDanglingLifetime 23</a><a href="106.html#line-23"> returnDanglingLifetime 23</a><a href="106.html#line-23"> uninitvar 23</a><a href="106.html#line-28"> misra-c2012-5.8 28</a><a href="106.html#line-30"> misra-c2012-5.9 30</a><a href="106.html#line-32"> danglingLifetime 32</a><a href="106.html#line-36"> danglingLifetime 36</a><a href="106.html#line-36"> misra-c2012-5.9 36</a><a href="106.html#line-38"> danglingLifetime 38</a><a href="106.html#line-38"> danglingLifetime 38</a><a href="106.html#line-42"> misra-c2012-5.9 42</a><a href="106.html#line-45"> unreadVariable 45</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -279,7 +279,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">52</span>
 <span class="normal">53</span>
 <span class="normal">54</span>
-<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
 <a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
@@ -290,50 +298,58 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.18.7</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.18.6</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * Flexible array members shall not be declared</span>
-<a id="line-15" name="line-15"></a><span class="cm"> */</span><span class="w"></span>
-<a id="line-16" name="line-16"></a>
-<a id="line-17" name="line-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
-<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
-<a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"></span>
-<a id="line-22" name="line-22"></a><span class="p">{</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="hll"><span class="w">   </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="w"> </span><span class="p">];</span><span class="w">   </span><span class="cm">/* Non-compliant  */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-25" name="line-25"></a><span class="p">};</span><span class="w"></span>
+<a id="line-14" name="line-14"></a><span class="cm"> * The address of an object with automatic storage shall not be copied to </span>
+<a id="line-15" name="line-15"></a><span class="cm"> * another object that persists after the first object has ceased to exist</span>
+<a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
+<a id="line-17" name="line-17"></a>
+<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;R_18_06.h&quot;</span><span class="cp"></span>
+<a id="line-19" name="line-19"></a>
+<a id="line-20" name="line-20"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">int8_t</span><span class="w"> </span><span class="o">*</span><span class="nf">func</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-21" name="line-21"></a><span class="p">{</span><span class="w"></span>
+<a id="line-22" name="line-22"></a><span class="hll"><span class="w">   </span><span class="kt">int8_t</span><span class="w"> </span><span class="n">local_auto</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Variable created here.</span>
+</span><a id="line-23" name="line-23"></a><span class="hll"><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_auto</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Non-compliant - &amp;local_auto is indeterminate</span><span class="error2">&lt;--- Returning pointer to local variable 'local_auto' that will be invalid when returning.</span><span class="error2">&lt;--- Address of variable taken here.</span><span class="error2">&lt;--- Uninitialized variable: &local_auto</span>
+</span><a id="line-24" name="line-24"></a><span class="cm">                        * when func returns */</span><span class="w"></span>
+<a id="line-25" name="line-25"></a><span class="p">}</span><span class="w"></span>
 <a id="line-26" name="line-26"></a>
 <a id="line-27" name="line-27"></a>
-<a id="line-28" name="line-28"></a><span class="k">static</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="o">*</span><span class="n">s1</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-29" name="line-29"></a><span class="p">{</span><span class="w"></span>
-<a id="line-30" name="line-30"></a><span class="w">   </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="o">*</span><span class="n">s2</span><span class="p">;</span><span class="w"></span>
-<a id="line-31" name="line-31"></a>
-<a id="line-32" name="line-32"></a><span class="hll"><span class="w">   </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">s1</span><span class="o">-&gt;</span><span class="n">len</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Uninitialized variable: s1->len</span><span class="error2">&lt;--- Required - Memory allocation functions (Eg malloc(), talloc() etc) shall not be used</span>
-</span><a id="line-33" name="line-33"></a><span class="w">         </span><span class="cm">/* breaks R.21.3 */</span><span class="w"></span>
-<a id="line-34" name="line-34"></a>
-<a id="line-35" name="line-35"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-36" name="line-36"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
-<a id="line-37" name="line-37"></a><span class="w">     </span><span class="o">*</span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">s1</span><span class="p">;</span><span class="w"> </span><span class="cm">/* only copies s1-&gt;len */</span><span class="w"></span>
-<a id="line-38" name="line-38"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
-<a id="line-39" name="line-39"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span><span class="w"></span>
-<a id="line-40" name="line-40"></a><span class="p">}</span><span class="w"></span>
+<a id="line-28" name="line-28"></a><span class="hll"><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-29" name="line-29"></a>
+<a id="line-30" name="line-30"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-31" name="line-31"></a><span class="p">{</span><span class="w"></span>
+<a id="line-32" name="line-32"></a><span class="hll"><span class="w">   </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Non-compliant - address of f&#39;s parameter u</span><span class="error2">&lt;--- Non-local variable 'sp' will use pointer to local variable 'u'.</span>
+</span><a id="line-33" name="line-33"></a><span class="cm">            * copied to static sp */</span><span class="w"></span>
+<a id="line-34" name="line-34"></a><span class="p">}</span><span class="w"></span>
+<a id="line-35" name="line-35"></a>
+<a id="line-36" name="line-36"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- Variable created here.</span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-37" name="line-37"></a><span class="p">{</span><span class="w"></span>
+<a id="line-38" name="line-38"></a><span class="hll"><span class="w">   </span><span class="n">g</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Calling function 'g', 1st argument '&u' value is lifetime=u</span><span class="error2">&lt;--- Address of variable taken here.</span>
+</span><a id="line-39" name="line-39"></a><span class="p">}</span><span class="w"></span>
+<a id="line-40" name="line-40"></a>
 <a id="line-41" name="line-41"></a>
-<a id="line-42" name="line-42"></a>
-<a id="line-43" name="line-43"></a><span class="kt">void</span><span class="w"> </span><span class="n">R_18_7</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-44" name="line-44"></a><span class="p">{</span><span class="w"></span>
-<a id="line-45" name="line-45"></a><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="n">str</span><span class="p">;</span><span class="w"></span>
-<a id="line-46" name="line-46"></a><span class="hll"><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="o">*</span><span class="n">ss1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">str</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Variable 'ss1' can be declared as pointer to const</span><span class="error2">&lt;--- Assignment 'ss1=&str', assigned value is <Uninit></span>
-</span><a id="line-47" name="line-47"></a><span class="hll"><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">sdata</span><span class="w"> </span><span class="o">*</span><span class="n">ss2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ss1</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Variable 'ss2' can be declared as pointer to const</span><span class="error2">&lt;--- Calling function 'copy', 1st argument 'ss1' value is <Uninit></span>
-</span><a id="line-48" name="line-48"></a>
-<a id="line-49" name="line-49"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ss2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
-<a id="line-50" name="line-50"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<a id="line-51" name="line-51"></a><span class="w">    </span><span class="n">use_uint16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ss2</span><span class="o">-&gt;</span><span class="n">len</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-52" name="line-52"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<a id="line-53" name="line-53"></a><span class="p">}</span><span class="w"></span>
-<a id="line-54" name="line-54"></a>
-<a id="line-55" name="line-55"></a><span class="cm">/* end of R_18_07.c */</span><span class="w"></span>
+<a id="line-42" name="line-42"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">h</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-43" name="line-43"></a><span class="p">{</span><span class="w"></span>
+<a id="line-44" name="line-44"></a><span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="p">;</span><span class="w"></span>
+<a id="line-45" name="line-45"></a><span class="hll"><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0u</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- Variable 'x' is assigned a value that is never used.</span>
+</span><a id="line-46" name="line-46"></a><span class="w">   </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Non-compliant - &amp;x stored in object with</span>
+<a id="line-47" name="line-47"></a><span class="cm">            * greater lifetime */</span><span class="w"></span>
+<a id="line-48" name="line-48"></a><span class="p">}</span><span class="w"></span>
+<a id="line-49" name="line-49"></a>
+<a id="line-50" name="line-50"></a>
+<a id="line-51" name="line-51"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_18_6</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-52" name="line-52"></a><span class="p">{</span><span class="w"></span>
+<a id="line-53" name="line-53"></a><span class="w">   </span><span class="kt">int8_t</span><span class="w"> </span><span class="o">*</span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">func</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-54" name="line-54"></a><span class="w">   </span><span class="n">use_int8_ptr</span><span class="p">(</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-55" name="line-55"></a>
+<a id="line-56" name="line-56"></a><span class="w">   </span><span class="n">f</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">3u</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-57" name="line-57"></a><span class="w">   </span><span class="n">h</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-58" name="line-58"></a>
+<a id="line-59" name="line-59"></a><span class="w">   </span><span class="n">R_18_6_2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-60" name="line-60"></a><span class="p">}</span><span class="w"></span>
+<a id="line-61" name="line-61"></a>
+<a id="line-62" name="line-62"></a>
+<a id="line-63" name="line-63"></a><span class="cm">/* end of R_18_06_1.c */</span><span class="w"></span>
 </pre></div></td></tr></table></div>
 
     </div>

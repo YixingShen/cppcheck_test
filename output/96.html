@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_17_05.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_17_04.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_17_05.c</p>
-<a href="96.html#line-24"> argumentSize 24</a><a href="96.html#line-24"> misra-c2012-5.9 24</a><a href="96.html#line-24"> misra-c2012-5.8 24</a><a href="96.html#line-26"> ctuArrayIndex 26</a><a href="96.html#line-30"> misra-c2012-5.9 30</a><a href="96.html#line-30"> misra-c2012-5.8 30</a><a href="96.html#line-36"> misra-c2012-5.9 36</a><a href="96.html#line-38"> argumentSize 38</a><a href="96.html#line-43"> argumentSize 43</a><a href="96.html#line-43"> argumentSize 43</a><a href="96.html#line-43"> ctuArrayIndex 43</a><a href="96.html#line-60"> constVariablePointer 60</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_17_04.c</p>
+<a href="96.html#line-29"> misra-c2012-15.5 29</a><a href="96.html#line-30"> missingReturn 30</a><a href="96.html#line-42"> misra-c2012-15.5 42</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -284,13 +284,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">57</span>
 <span class="normal">58</span>
 <span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
 <a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
@@ -301,61 +295,55 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
 <a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.17.5</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * R.17.4</span>
 <a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * The function argument corresponding to a parameter declared to have an array </span>
-<a id="line-15" name="line-15"></a><span class="cm"> * type shall have an appropriate number of elements</span>
+<a id="line-14" name="line-14"></a><span class="cm"> * All exit paths from a function with non-void return type shall have an </span>
+<a id="line-15" name="line-15"></a><span class="cm"> * explicit return statement with an expression</span>
 <a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-17" name="line-17"></a>
-<a id="line-18" name="line-18"></a>
-<a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
-<a id="line-20" name="line-20"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
-<a id="line-21" name="line-21"></a>
-<a id="line-22" name="line-22"></a>
-<a id="line-23" name="line-23"></a><span class="cm">/* Intent is that function does not access outside of [0]..[3]   */</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fn1</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">array1</span><span class="p">[</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- Declaration of 1st function argument.</span><span class="error2">&lt;--- No text specified</span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
-</span><a id="line-25" name="line-25"></a><span class="p">{</span><span class="w"></span>
-<a id="line-26" name="line-26"></a><span class="hll"><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">array1</span><span class="p">[</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Using argument array1</span>
-</span><a id="line-27" name="line-27"></a><span class="p">}</span><span class="w"></span>
-<a id="line-28" name="line-28"></a>
-<a id="line-29" name="line-29"></a><span class="cm">/* Intent is that function handles arrays of any size               */</span><span class="w"></span>
-<a id="line-30" name="line-30"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fn2</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">array2</span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- No text specified</span><span class="error2">&lt;--- Required - All identifiers must be unique</span>
-</span><a id="line-31" name="line-31"></a><span class="p">{</span><span class="w"></span>
-<a id="line-32" name="line-32"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">array2</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-33" name="line-33"></a><span class="p">}</span><span class="w"></span>
-<a id="line-34" name="line-34"></a>
+<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
+<a id="line-19" name="line-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-20" name="line-20"></a>
+<a id="line-21" name="line-21"></a><span class="cp">#define V_MIN 1U</span>
+<a id="line-22" name="line-22"></a><span class="cp">#define V_MAX 4U</span>
+<a id="line-23" name="line-23"></a>
+<a id="line-24" name="line-24"></a>
+<a id="line-25" name="line-25"></a><span class="k">static</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="nf">absolute</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-26" name="line-26"></a><span class="p">{</span><span class="w"></span>
+<a id="line-27" name="line-27"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-28" name="line-28"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
+<a id="line-29" name="line-29"></a><span class="hll"><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-30" name="line-30"></a><span class="hll"><span class="w">   </span><span class="p">}</span><span class="w"></span><span class="error2">&lt;--- Found an exit path from function with non-void return type that has missing return statement</span>
+</span><a id="line-31" name="line-31"></a><span class="w">   </span><span class="cm">/* Non-compliant - control can reach this point without</span>
+<a id="line-32" name="line-32"></a><span class="cm">    * returning a value, also breaks R.15.5</span>
+<a id="line-33" name="line-33"></a><span class="cm">    */</span><span class="w"></span>
+<a id="line-34" name="line-34"></a><span class="p">}</span><span class="w"></span>
 <a id="line-35" name="line-35"></a>
-<a id="line-36" name="line-36"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fn</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w">  </span><span class="p">)</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
-</span><a id="line-37" name="line-37"></a><span class="p">{</span><span class="w"></span>
-<a id="line-38" name="line-38"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">arr3</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span><span class="error2">&lt;--- Passing buffer 'arr3' to function that is declared here</span>
-</span><a id="line-39" name="line-39"></a><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">arr4</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<a id="line-40" name="line-40"></a>
-<a id="line-41" name="line-41"></a><span class="w">   </span><span class="n">fn1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">arr4</span><span class="w"> </span><span class="p">);</span><span class="w">     </span><span class="cm">/* Compliant - size of array matches the prototype */</span><span class="w"></span>
-<a id="line-42" name="line-42"></a>
-<a id="line-43" name="line-43"></a><span class="hll"><span class="w">   </span><span class="n">fn1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">arr3</span><span class="w"> </span><span class="p">);</span><span class="w">     </span><span class="cm">/* Non-compliant - size of array does not match prototype */</span><span class="w"></span><span class="error2">&lt;--- Buffer 'arr3' is too small, the function 'fn1' expects a bigger buffer in 1st argument</span><span class="error2">&lt;--- Function 'fn1' is called</span><span class="error2">&lt;--- Calling function fn1, 1st argument is uninitialized</span>
-</span><a id="line-44" name="line-44"></a>
-<a id="line-45" name="line-45"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-46" name="line-46"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
-<a id="line-47" name="line-47"></a><span class="w">      </span><span class="n">fn1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">);</span><span class="w">   </span><span class="cm">/* Compliant only if ptr points to at least 4 elements */</span><span class="w"></span>
-<a id="line-48" name="line-48"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
-<a id="line-49" name="line-49"></a>
-<a id="line-50" name="line-50"></a><span class="w">   </span><span class="n">fn2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">arr4</span><span class="w"> </span><span class="p">);</span><span class="w">    </span><span class="cm">/* Compliant */</span><span class="w"></span>
-<a id="line-51" name="line-51"></a>
-<a id="line-52" name="line-52"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-53" name="line-53"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
-<a id="line-54" name="line-54"></a><span class="w">      </span><span class="n">fn2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* Compliant */</span><span class="w"></span>
-<a id="line-55" name="line-55"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
-<a id="line-56" name="line-56"></a><span class="p">}</span><span class="w"></span>
-<a id="line-57" name="line-57"></a>
-<a id="line-58" name="line-58"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_17_5</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-59" name="line-59"></a><span class="p">{</span><span class="w"></span>
-<a id="line-60" name="line-60"></a><span class="hll"><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int32_ptr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- Variable 'ptr' can be declared as pointer to const</span>
-</span><a id="line-61" name="line-61"></a>
-<a id="line-62" name="line-62"></a><span class="w">   </span><span class="n">fn</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-63" name="line-63"></a><span class="p">}</span><span class="w"></span>
-<a id="line-64" name="line-64"></a>
-<a id="line-65" name="line-65"></a>
-<a id="line-66" name="line-66"></a><span class="cm">/* end of R_17_05.c */</span><span class="w"></span>
+<a id="line-36" name="line-36"></a>
+<a id="line-37" name="line-37"></a><span class="k">static</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">lookup</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">table</span><span class="p">[</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-38" name="line-38"></a><span class="p">{</span><span class="w"></span>
+<a id="line-39" name="line-39"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">V_MIN</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">V_MAX</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-40" name="line-40"></a><span class="w">   </span><span class="p">{</span><span class="w"></span>
+<a id="line-41" name="line-41"></a><span class="w">     </span><span class="cm">/* Non-compliant - no value returned. Constraint in C99 */</span><span class="w"></span>
+<a id="line-42" name="line-42"></a><span class="hll"><span class="w">     </span><span class="k">return</span><span class="p">;</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-43" name="line-43"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a id="line-44" name="line-44"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">table</span><span class="p">[</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* Also breaks R.15.5 */</span><span class="w"></span>
+<a id="line-45" name="line-45"></a><span class="p">}</span><span class="w"></span>
+<a id="line-46" name="line-46"></a>
+<a id="line-47" name="line-47"></a>
+<a id="line-48" name="line-48"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_17_4</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="line-49" name="line-49"></a><span class="p">{</span><span class="w"></span>
+<a id="line-50" name="line-50"></a><span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">tabs</span><span class="p">[</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1U</span><span class="p">,</span><span class="w"> </span><span class="mi">2U</span><span class="p">,</span><span class="w"> </span><span class="mi">3U</span><span class="p">,</span><span class="w"> </span><span class="mi">4U</span><span class="p">,</span><span class="w"> </span><span class="mi">5U</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<a id="line-51" name="line-51"></a><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_uint16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-52" name="line-52"></a>
+<a id="line-53" name="line-53"></a><span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lookup</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tabs</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-54" name="line-54"></a><span class="w">   </span><span class="n">use_uint16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-55" name="line-55"></a>
+<a id="line-56" name="line-56"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">absolute</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-57" name="line-57"></a><span class="p">}</span><span class="w"></span>
+<a id="line-58" name="line-58"></a>
+<a id="line-59" name="line-59"></a><span class="cm">/* end of R_17_04.c */</span><span class="w"></span>
+<a id="line-60" name="line-60"></a>
 </pre></div></td></tr></table></div>
 
     </div>

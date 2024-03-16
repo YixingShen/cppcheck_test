@@ -216,12 +216,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: MISRA-Example-Suite\R_08_12.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_08_12.c</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> MISRA-Example-Suite\R_08_12.c</p>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_08_12.c</p>
 <a href="38.html#line-23"> misra-c2012-8.12 23</a>
     </div>
     <div id="content">
@@ -277,7 +277,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-20" name="line-20"></a>
 <a id="line-21" name="line-21"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_8_12</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 <a id="line-22" name="line-22"></a><span class="p">{</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="hll"><span class="w">   </span><span class="k">enum</span><span class="w"> </span><span class="nc">colour</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">red</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">yellow</span><span class="o">=</span><span class="mi">5</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="cm">/* Non-compliant - green also 5 */</span><span class="w"></span><span class="error2">&lt;--- No text specified</span>
+<a id="line-23" name="line-23"></a><span class="hll"><span class="w">   </span><span class="k">enum</span><span class="w"> </span><span class="nc">colour</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">red</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">yellow</span><span class="o">=</span><span class="mi">5</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="cm">/* Non-compliant - green also 5 */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
 </span><a id="line-24" name="line-24"></a>
 <a id="line-25" name="line-25"></a><span class="w">   </span><span class="k">enum</span><span class="w"> </span><span class="nc">colour</span><span class="w"> </span><span class="n">favourite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">red</span><span class="p">;</span><span class="w"></span>
 <a id="line-26" name="line-26"></a>
