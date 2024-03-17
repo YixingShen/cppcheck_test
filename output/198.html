@@ -216,13 +216,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <body>
     <div id="wrapper">
     <div id="header" class="header">
-      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_05_08_2.c</h1>
+      <h1>Cppcheck report - [project name]: ..\MISRA-Example-Suite\R_15_06.h</h1>
 
     </div>
 
     <div id="menu">
-     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_05_08_2.c</p>
-<a href="198.html#line-21"> misra-c2012-5.8 21</a><a href="198.html#line-24"> misra-c2012-5.8 24</a>
+     <p><a href="index.html">Defects:</a> ..\MISRA-Example-Suite\R_15_06.h</p>
+<a href="198.html#line-19"> misra-c2012-5.8 19</a>
     </div>
     <div id="content">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -246,28 +246,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
 <a id="line-2" name="line-2"></a><span class="cm"> * Release: 2016-01-01</span>
 <a id="line-3" name="line-3"></a><span class="cm"> *</span>
 <a id="line-4" name="line-4"></a><span class="cm"> * Example from MISRA C:2012 ( THIS IS NOT A TEST SUITE )</span>
@@ -277,39 +256,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <a id="line-8" name="line-8"></a><span class="cm"> * See file READ_ME.txt for full copyright, license and release instructions.</span>
 <a id="line-9" name="line-9"></a><span class="cm"> */</span><span class="w"></span>
 <a id="line-10" name="line-10"></a>
-<a id="line-11" name="line-11"></a><span class="cm">/*</span>
-<a id="line-12" name="line-12"></a><span class="cm"> * R.5.8</span>
-<a id="line-13" name="line-13"></a><span class="cm"> *</span>
-<a id="line-14" name="line-14"></a><span class="cm"> * Identifiers that define objects or functions with external linkage shall be </span>
-<a id="line-15" name="line-15"></a><span class="cm"> * unique</span>
-<a id="line-16" name="line-16"></a><span class="cm"> */</span><span class="w"></span>
-<a id="line-17" name="line-17"></a>
-<a id="line-18" name="line-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;R_05_08.h&quot;</span><span class="cp"></span>
-<a id="line-19" name="line-19"></a>
-<a id="line-20" name="line-20"></a>
-<a id="line-21" name="line-21"></a><span class="hll"><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo8</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w">       </span><span class="cm">/* Non-compliant */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
-</span><a id="line-22" name="line-22"></a><span class="w">                              </span><span class="cm">/* Already defined with external linkage in R_05_08_01.c */</span><span class="w"></span>
-<a id="line-23" name="line-23"></a><span class="p">{</span><span class="w"></span>
-<a id="line-24" name="line-24"></a><span class="hll"><span class="w">   </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">count8</span><span class="p">;</span><span class="w">            </span><span class="cm">/* Non-compliant                   */</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
-</span><a id="line-25" name="line-25"></a><span class="w">                              </span><span class="cm">/* &quot;count8&quot; has no linkage but clashes with an</span>
-<a id="line-26" name="line-26"></a><span class="cm">                                identifier with external linkage */</span><span class="w"></span>
-<a id="line-27" name="line-27"></a>
-<a id="line-28" name="line-28"></a><span class="w">   </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">index</span><span class="p">;</span><span class="w">            </span><span class="cm">/* Compliant - &quot;index&quot; has no linkage */</span><span class="w"></span>
-<a id="line-29" name="line-29"></a>
-<a id="line-30" name="line-30"></a><span class="w">   </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-31" name="line-31"></a><span class="w">   </span><span class="n">use_int32</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-32" name="line-32"></a><span class="w">   </span><span class="n">count8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_int16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-33" name="line-33"></a><span class="w">   </span><span class="n">use_int16</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">count8</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-34" name="line-34"></a><span class="p">}</span><span class="w"></span>
-<a id="line-35" name="line-35"></a>
-<a id="line-36" name="line-36"></a><span class="kt">void</span><span class="w"> </span><span class="nf">R_5_8_2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<a id="line-37" name="line-37"></a><span class="p">{</span><span class="w"></span>
-<a id="line-38" name="line-38"></a><span class="w">   </span><span class="n">foo8</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<a id="line-39" name="line-39"></a><span class="p">}</span><span class="w"></span>
-<a id="line-40" name="line-40"></a>
-<a id="line-41" name="line-41"></a><span class="cm">/* End of R_05_08_02.c */</span><span class="w"></span>
-<a id="line-42" name="line-42"></a>
-<a id="line-43" name="line-43"></a>
+<a id="line-11" name="line-11"></a><span class="cp">#ifndef R_15_06_</span>
+<a id="line-12" name="line-12"></a><span class="cp">#define R_15_06_</span>
+<a id="line-13" name="line-13"></a>
+<a id="line-14" name="line-14"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_types.h&quot;</span><span class="cp"></span>
+<a id="line-15" name="line-15"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mc3_header.h&quot;</span><span class="cp"></span>
+<a id="line-16" name="line-16"></a>
+<a id="line-17" name="line-17"></a><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">action_1</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-18" name="line-18"></a><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">action_2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-19" name="line-19"></a><span class="hll"><span class="k">extern</span><span class="w"> </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">fn</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">);</span><span class="w"></span><span class="error2">&lt;--- misra violation (rule-texts-file not found: misra2012-rule.txt)</span>
+</span><a id="line-20" name="line-20"></a><span class="k">extern</span><span class="w"> </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">process_data</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="line-21" name="line-21"></a>
+<a id="line-22" name="line-22"></a><span class="cp">#endif </span><span class="cm">/* R_15_06_ */</span><span class="cp"></span>
 </pre></div></td></tr></table></div>
 
     </div>

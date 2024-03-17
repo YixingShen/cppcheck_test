@@ -99,10 +99,10 @@
             <location file="..\MISRA-Example-Suite\R_04_02.c" line="22" column="30"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_05_01_2.c">
-            <location file="..\MISRA-Example-Suite\R_05_01_2.c" line="20" column="9"/>
+            <location file="..\MISRA-Example-Suite\R_05_01_2.c" line="19" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_05_01_2.c">
-            <location file="..\MISRA-Example-Suite\R_05_01_2.c" line="19" column="9"/>
+            <location file="..\MISRA-Example-Suite\R_05_01_2.c" line="20" column="9"/>
         </error>
         <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398" file0="../MISRA-Example-Suite/R_05_03.c">
             <location file="..\MISRA-Example-Suite\R_05_03.c" line="25" column="15" info="Shadow variable"/>
@@ -239,25 +239,25 @@
             <location file="..\MISRA-Example-Suite\R_08_04.c" line="62" column="6"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_04.c">
-            <location file="..\MISRA-Example-Suite\R_08_04.c" line="35" column="9"/>
+            <location file="..\MISRA-Example-Suite\R_08_04.c" line="29" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_04.c">
-            <location file="..\MISRA-Example-Suite\R_08_04.c" line="36" column="9"/>
+            <location file="..\MISRA-Example-Suite\R_08_04.c" line="35" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_04.c">
             <location file="..\MISRA-Example-Suite\R_08_04.c" line="38" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_04.c">
-            <location file="..\MISRA-Example-Suite\R_08_04.c" line="29" column="9"/>
+            <location file="..\MISRA-Example-Suite\R_08_04.c" line="36" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_06_1.c">
+            <location file="..\MISRA-Example-Suite\R_08_06_1.c" line="25" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_06_1.c">
             <location file="..\MISRA-Example-Suite\R_08_06_1.c" line="28" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_06_1.c">
             <location file="..\MISRA-Example-Suite\R_08_06_1.c" line="24" column="9"/>
-        </error>
-        <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_06_1.c">
-            <location file="..\MISRA-Example-Suite\R_08_06_1.c" line="25" column="9"/>
         </error>
         <error id="misra-c2012-8.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_06_2.c">
             <location file="..\MISRA-Example-Suite\R_08_06_2.c" line="22" column="9"/>
@@ -266,10 +266,10 @@
             <location file="..\MISRA-Example-Suite\R_08_07_1.c" line="22" column="9"/>
         </error>
         <error id="misra-c2012-8.8" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_08.c">
-            <location file="..\MISRA-Example-Suite\R_08_08.c" line="23" column="16"/>
+            <location file="..\MISRA-Example-Suite\R_08_08.c" line="25" column="16"/>
         </error>
         <error id="misra-c2012-8.8" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_08.c">
-            <location file="..\MISRA-Example-Suite\R_08_08.c" line="25" column="16"/>
+            <location file="..\MISRA-Example-Suite\R_08_08.c" line="23" column="16"/>
         </error>
         <error id="misra-c2012-8.9" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_08_09.c">
             <location file="..\MISRA-Example-Suite\R_08_09.c" line="45" column="16"/>
@@ -356,13 +356,13 @@
             <symbol>s</symbol>
         </error>
         <error id="misra-c2012-9.2" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_02.c">
-            <location file="..\MISRA-Example-Suite\R_09_02.c" line="22" column="12"/>
+            <location file="..\MISRA-Example-Suite\R_09_02.c" line="31" column="12"/>
         </error>
         <error id="misra-c2012-9.2" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_02.c">
             <location file="..\MISRA-Example-Suite\R_09_02.c" line="30" column="12"/>
         </error>
         <error id="misra-c2012-9.2" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_02.c">
-            <location file="..\MISRA-Example-Suite\R_09_02.c" line="31" column="12"/>
+            <location file="..\MISRA-Example-Suite\R_09_02.c" line="22" column="12"/>
         </error>
         <error id="misra-c2012-19.2" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_02.c">
             <location file="..\MISRA-Example-Suite\R_09_02.c" line="40" column="4"/>
@@ -394,22 +394,22 @@
             <location file="..\MISRA-Example-Suite\R_09_03.c" line="47" column="19"/>
         </error>
         <error id="misra-c2012-9.2" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
-            <location file="..\MISRA-Example-Suite\R_09_03.c" line="39" column="13"/>
+            <location file="..\MISRA-Example-Suite\R_09_03.c" line="43" column="14"/>
         </error>
         <error id="misra-c2012-9.2" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
-            <location file="..\MISRA-Example-Suite\R_09_03.c" line="43" column="14"/>
+            <location file="..\MISRA-Example-Suite\R_09_03.c" line="39" column="13"/>
+        </error>
+        <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
+            <location file="..\MISRA-Example-Suite\R_09_03.c" line="25" column="12"/>
         </error>
         <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
             <location file="..\MISRA-Example-Suite\R_09_03.c" line="27" column="14"/>
         </error>
         <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
-            <location file="..\MISRA-Example-Suite\R_09_03.c" line="37" column="11"/>
-        </error>
-        <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
             <location file="..\MISRA-Example-Suite\R_09_03.c" line="41" column="13"/>
         </error>
         <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_03.c">
-            <location file="..\MISRA-Example-Suite\R_09_03.c" line="25" column="12"/>
+            <location file="..\MISRA-Example-Suite\R_09_03.c" line="37" column="11"/>
         </error>
         <error id="constVariable" severity="style" msg="Variable &apos;a&apos; can be declared as const array" verbose="Variable &apos;a&apos; can be declared as const array" cwe="398" file0="../MISRA-Example-Suite/R_09_04.c">
             <location file="..\MISRA-Example-Suite\R_09_04.c" line="25" column="14" info="Variable &apos;a&apos; can be declared as const array"/>
@@ -434,10 +434,10 @@
             <location file="..\MISRA-Example-Suite\R_09_04.c" line="25" column="14"/>
         </error>
         <error id="misra-c2012-9.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_04.c">
-            <location file="..\MISRA-Example-Suite\R_09_04.c" line="40" column="12"/>
+            <location file="..\MISRA-Example-Suite\R_09_04.c" line="58" column="20"/>
         </error>
         <error id="misra-c2012-9.4" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_09_04.c">
-            <location file="..\MISRA-Example-Suite\R_09_04.c" line="58" column="20"/>
+            <location file="..\MISRA-Example-Suite\R_09_04.c" line="40" column="12"/>
         </error>
         <error id="constVariable" severity="style" msg="Variable &apos;a1&apos; can be declared as const array" verbose="Variable &apos;a1&apos; can be declared as const array" cwe="398" file0="../MISRA-Example-Suite/R_09_05.c">
             <location file="..\MISRA-Example-Suite\R_09_05.c" line="24" column="12" info="Variable &apos;a1&apos; can be declared as const array"/>
@@ -1260,10 +1260,10 @@
             <symbol>row</symbol>
         </error>
         <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_04.c">
-            <location file="..\MISRA-Example-Suite\R_18_04.c" line="84" column="12"/>
+            <location file="..\MISRA-Example-Suite\R_18_04.c" line="83" column="12"/>
         </error>
         <error id="misra-c2012-9.3" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_04.c">
-            <location file="..\MISRA-Example-Suite\R_18_04.c" line="83" column="12"/>
+            <location file="..\MISRA-Example-Suite\R_18_04.c" line="84" column="12"/>
         </error>
         <error id="misra-c2012-17.8" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_04.c">
             <location file="..\MISRA-Example-Suite\R_18_04.c" line="67" column="6"/>
@@ -1314,19 +1314,19 @@
             <symbol>ps1</symbol>
         </error>
         <error id="misra-c2012-18.5" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_05.c">
-            <location file="..\MISRA-Example-Suite\R_18_05.c" line="43" column="23"/>
+            <location file="..\MISRA-Example-Suite\R_18_05.c" line="26" column="27"/>
         </error>
         <error id="misra-c2012-18.5" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_05.c">
-            <location file="..\MISRA-Example-Suite\R_18_05.c" line="24" column="15"/>
+            <location file="..\MISRA-Example-Suite\R_18_05.c" line="43" column="23"/>
         </error>
         <error id="misra-c2012-18.5" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_05.c">
             <location file="..\MISRA-Example-Suite\R_18_05.c" line="51" column="15"/>
         </error>
         <error id="misra-c2012-18.5" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_05.c">
-            <location file="..\MISRA-Example-Suite\R_18_05.c" line="26" column="27"/>
+            <location file="..\MISRA-Example-Suite\R_18_05.c" line="59" column="17"/>
         </error>
         <error id="misra-c2012-18.5" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)" file0="../MISRA-Example-Suite/R_18_05.c">
-            <location file="..\MISRA-Example-Suite\R_18_05.c" line="59" column="17"/>
+            <location file="..\MISRA-Example-Suite\R_18_05.c" line="24" column="15"/>
         </error>
         <error id="returnDanglingLifetime" severity="error" msg="Returning pointer to local variable &apos;local_auto&apos; that will be invalid when returning." verbose="Returning pointer to local variable &apos;local_auto&apos; that will be invalid when returning." cwe="562" file0="../MISRA-Example-Suite/R_18_06_1.c">
             <location file="..\MISRA-Example-Suite\R_18_06_1.c" line="23" column="11"/>
@@ -2197,7 +2197,7 @@
             <location file="..\MISRA-Example-Suite\R_08_04.c" line="25" column="16"/>
         </error>
         <error id="misra-c2012-5.8" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)">
-            <location file="..\MISRA-Example-Suite\R_05_09_1.c" line="40" column="19"/>
+            <location file="..\MISRA-Example-Suite\D_04_13.h" line="26" column="12"/>
         </error>
         <error id="misra-c2012-5.8" severity="style" msg="misra violation (rule-texts-file not found: misra2012-rule.txt)" verbose="misra violation (rule-texts-file not found: misra2012-rule.txt)">
             <location file="..\MISRA-Example-Suite\R_05_03.c" line="45" column="17"/>
