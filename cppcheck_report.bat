@@ -1,7 +1,3 @@
-# cppcheck_test
-cppcheck_test
-
-```
 set CPPCHECK_INSTALL_PATH=;D:\Cppcheck
 
 set BUILD_DIR=cppchk-build-dir
@@ -35,4 +31,4 @@ cppcheck --verbose ^
 
 python cppchk/htmlreport/cppcheck-htmlreport --file=report.xml --report-dir=%REPORT_DIR% --source-dir=.
 
-```
+pause

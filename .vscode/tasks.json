@@ -4,9 +4,9 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-            "label": "cppcheck",
+            "label": "cppcheck selected file",
             "type": "shell",
-            "command": "run",
+            "command": "cppcheck_selected_file.bat ${file}",
             "problemMatcher": []
 		}
 	]
